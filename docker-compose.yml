@@ -1,0 +1,21 @@
+version: '3'
+services:
+  postgres:
+    image: postgres:latest
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=${ADMIN_PASSWORD}
+    volumes:
+      - ./db:/var/lib/postgresql/data
+      - ./initdb.d:/docker-entrypoint-initdb.d:ro
+  hasura:
+    image: hasura/graphql-engine:latest
+    restart: always
+    ports:
+      - '172.17.0.1:2108:8080'
+    depends_on:
+      - 'postgres'
+    environment:
+      - HASURA_GRAPHQL_DATABASE_URL=postgres://postgres:${ADMIN_PASSWORD}@postgres:5432/postgres
+      - HASURA_GRAPHQL_ENABLE_CONSOLE=true
+      - HASURA_GRAPHQL_ADMIN_SECRET=${ADMIN_PASSWORD}
