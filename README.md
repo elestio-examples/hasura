@@ -4,7 +4,7 @@
 
 Deploy Hasura server with CI/CD on Elestio
 
-<img src="hasura.gif" style='width: 100%;'/>
+<img src="hasura.png" style='width: 100%;'/>
 <br/>
 <br/>
 
