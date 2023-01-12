@@ -14,3 +14,5 @@ You can can open Hasura UI here:
 
     URL: https://[CI_CD_DOMAIN]
     password: [ADMIN_PASSWORD]
+
+## More informations <a target="_blank" href="https://hasura.io/docs/latest/index/">here</a>
