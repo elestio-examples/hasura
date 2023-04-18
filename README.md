@@ -10,7 +10,7 @@ Deploy Hasura server with CI/CD on Elestio
 
 # Once deployed ...
 
-You can can open Hasura UI here:
+You can open Hasura UI here:
 
     URL: https://[CI_CD_DOMAIN]
     password: [ADMIN_PASSWORD]
