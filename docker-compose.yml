@@ -9,7 +9,7 @@ services:
       - ./db:/var/lib/postgresql/data
       - ./initdb.d:/docker-entrypoint-initdb.d:ro
   hasura:
-    image: hasura/graphql-engine:latest
+    image: hasura/graphql-engine:${SOFTWARE_VERSION_TAG}
     restart: always
     ports:
       - '172.17.0.1:2108:8080'
